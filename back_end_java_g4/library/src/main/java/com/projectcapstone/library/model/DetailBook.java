@@ -19,7 +19,7 @@ public class DetailBook {
     private Book book;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "branch", nullable = false)
+    @JoinColumn(name = "idbranch", nullable = false)
     private Branch branch;
 
     @Column(columnDefinition = "boolean default true")
