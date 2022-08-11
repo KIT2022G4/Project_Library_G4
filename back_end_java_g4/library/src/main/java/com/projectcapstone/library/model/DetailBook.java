@@ -22,6 +22,9 @@ public class DetailBook {
     @JoinColumn(name = "branch", nullable = false)
     private Branch branch;
 
+    @Column(columnDefinition = "boolean default true")
+    private boolean status;
+
     @OneToMany(mappedBy = "detailbook", cascade = CascadeType.ALL)
     private List<OrderBook> orderBookList;
 }
