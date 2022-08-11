@@ -12,7 +12,10 @@ public class OrderBook {
     private Integer idorderbook;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "iddetailbook", nullable = false)
+    @JoinColumns({
+            @JoinColumn(name = "iddetailbook", nullable = false, referencedColumnName="iddetailbook"),
+            @JoinColumn(name = "idbranch", nullable = false, referencedColumnName="idbranch")
+    })
     private DetailBook detailbook;
 
     @ManyToOne(cascade = CascadeType.ALL)
