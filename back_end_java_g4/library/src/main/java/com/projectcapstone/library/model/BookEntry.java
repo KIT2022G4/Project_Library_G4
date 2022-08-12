@@ -22,7 +22,7 @@ public class BookEntry {
     private Date dor;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "iduser", nullable = false)
+    @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
     private User user;
 
 
