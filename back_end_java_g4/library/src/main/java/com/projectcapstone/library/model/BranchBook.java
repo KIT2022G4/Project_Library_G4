@@ -13,14 +13,14 @@ public class BranchBook {
     IdBranchBook IdBranchBook;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @MapsId("idbranch")
-    @JoinColumn(name = "idbranch")
+    @MapsId("codebranch")
+    @JoinColumn(name = "codebranch", nullable = false, referencedColumnName="codebranch")
     private Branch branch;
 
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @MapsId("idbook")
-    @JoinColumn(name = "idbook")
+    @MapsId("codebook")
+    @JoinColumn(name = "codebook", nullable = false , referencedColumnName="codebook")
     private Book book;
 
     @Column(columnDefinition = "int default 0" )
