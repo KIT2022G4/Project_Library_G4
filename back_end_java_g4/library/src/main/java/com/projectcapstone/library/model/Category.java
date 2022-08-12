@@ -15,7 +15,7 @@ public class Category {
     private Integer idcategory;
 
     @Column(nullable = false, unique = true)
-    private String categoryname;
+        private String categoryname;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Book> books;
