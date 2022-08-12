@@ -14,10 +14,12 @@ public class Branch {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idbranch;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String branchname;
 
     @OneToMany(mappedBy = "branch",cascade = CascadeType.ALL)
     private List<BranchBook> branchBookList;
 
+    @Column(nullable = false, unique = true)
+    private String codebranch;
 }
