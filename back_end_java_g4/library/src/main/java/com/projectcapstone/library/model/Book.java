@@ -30,6 +30,9 @@ public class Book {
     @Column(name = "bookimage", columnDefinition = "varchar(255) default 'https://khothietke.net/wp-content/uploads/2021/05/PNGkhothietke.net-02705.png'")
     private String bookimage;
 
+    @Column(nullable = false, unique = true)
+    private String codebook;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idcategory", nullable = false)
     private Category category;
