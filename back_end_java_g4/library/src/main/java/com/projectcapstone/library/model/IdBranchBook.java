@@ -8,9 +8,9 @@ import java.io.Serializable;
 
 @Embeddable
 public class IdBranchBook implements Serializable {
-    @Column(name = "idbook", nullable = false)
-    Integer idbook;
+    @Column(name = "codebook")
+    String codebook;
 
-    @Column(name = "idbranch", nullable = false)
-    Integer idbranch;
+    @Column(name = "codebranch")
+    String codebranch;
 }
