@@ -15,11 +15,11 @@ public class DetailBook {
     private Integer iddetailbook;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idbook", nullable = false)
+    @JoinColumn(name = "codebook", referencedColumnName="codebook", nullable = false)
     private Book book;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idbranch", nullable = false)
+    @JoinColumn(name = "codebranch", referencedColumnName="codebranch", nullable = false)
     private Branch branch;
 
     @Column(columnDefinition = "boolean default true")
@@ -27,4 +27,7 @@ public class DetailBook {
 
     @OneToMany(mappedBy = "detailbook", cascade = CascadeType.ALL)
     private List<OrderBook> orderBookList;
+
+    @Column(nullable = false, unique = true)
+    private String codedetailbook;
 }
