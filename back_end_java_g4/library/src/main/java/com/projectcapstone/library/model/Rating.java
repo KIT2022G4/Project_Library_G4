@@ -14,11 +14,11 @@ public class Rating {
     private Integer idrating;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "iduser")
+    @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
     private User user;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idbook")
+    @JoinColumn(name = "codebook", nullable = false, referencedColumnName="codebook")
     private Book book;
 
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
