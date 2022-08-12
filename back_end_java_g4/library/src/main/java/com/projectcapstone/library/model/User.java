@@ -29,6 +29,9 @@ public class User {
     @Column(columnDefinition = "int default 1" )
     private Integer role;
 
+    @Column(nullable = false, unique = true)
+    private String codeuser;
+
     @Column(columnDefinition = "boolean default true")
     private boolean status;
 
