@@ -13,13 +13,13 @@ public class OrderBook {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumns({
-            @JoinColumn(name = "iddetailbook", nullable = false, referencedColumnName="iddetailbook"),
-            @JoinColumn(name = "idbranch", nullable = false, referencedColumnName="idbranch")
+            @JoinColumn(name = "codedetailbook", nullable = false, referencedColumnName="codedetailbook"),
+            @JoinColumn(name = "codebranch", nullable = false, referencedColumnName="codebranch")
     })
     private DetailBook detailbook;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "iduser", nullable = false)
+    @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
     private User user;
 
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
