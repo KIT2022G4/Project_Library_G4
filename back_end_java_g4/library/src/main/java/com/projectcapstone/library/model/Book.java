@@ -22,6 +22,7 @@ public class Book {
 
     private String publisher;
 
+    @Column(columnDefinition = "TEXT")
     private String introduction;
 
     @Column(columnDefinition = "DATE")
