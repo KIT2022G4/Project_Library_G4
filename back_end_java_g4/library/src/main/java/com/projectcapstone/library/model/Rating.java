@@ -11,7 +11,7 @@ import java.sql.Date;
 public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idrating;
+    private long idrating;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
