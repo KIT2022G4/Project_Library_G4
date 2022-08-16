@@ -1,14 +1,18 @@
 package com.projectcapstone.library.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.Check;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 @Data
 @Entity
 @Table(name = "rating")
-public class Rating {
+@Check(constraints = "rt between 0 and 5")
+public class Rating implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idrating;
@@ -23,5 +27,10 @@ public class Rating {
 
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date dor;
+
+    @Column(columnDefinition = "Text")
+    private String comment;
+
+    private Float rt;
 
 }
