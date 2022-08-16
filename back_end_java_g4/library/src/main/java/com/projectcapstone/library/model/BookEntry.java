@@ -11,7 +11,7 @@ import java.sql.Date;
 public class BookEntry {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer identry;
+    private long identry;
 
     private String bookname;
 
