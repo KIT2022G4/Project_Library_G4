@@ -1,6 +1,10 @@
+body{
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
+    background: #fff;
   }
   
   /* Full-width inputs */
