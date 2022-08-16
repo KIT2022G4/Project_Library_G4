@@ -3,12 +3,13 @@ package com.projectcapstone.library.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 @Data
 @Entity
 @Table(name = "bookentry")
-public class BookEntry {
+public class BookEntry implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long identry;
