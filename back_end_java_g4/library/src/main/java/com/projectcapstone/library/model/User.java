@@ -23,6 +23,10 @@ public class User {
 
     private String email;
 
+    private String phone;
+    
+    private String address;
+
     @Column(columnDefinition = "varchar(255) default 'https://st.quantrimang.com/photos/image/2017/04/08/anh-dai-dien-FB-200.jpg'")
     private String urlimage;
 
