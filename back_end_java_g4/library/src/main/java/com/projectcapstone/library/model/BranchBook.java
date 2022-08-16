@@ -1,14 +1,16 @@
 package com.projectcapstone.library.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Data
 @Entity
 @Table(name = "branchbook")
-public class BranchBook {
+public class BranchBook implements Serializable {
     @EmbeddedId
     IdBranchBook IdBranchBook;
 
