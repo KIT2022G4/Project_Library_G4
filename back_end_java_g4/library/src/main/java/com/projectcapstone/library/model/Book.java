@@ -1,8 +1,10 @@
 package com.projectcapstone.library.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 
@@ -10,7 +12,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "book")
-public class Book {
+public class Book implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idbook;
@@ -39,12 +41,15 @@ public class Book {
     private Category category;
 
     @OneToMany(mappedBy = "book",cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<BranchBook> branchBookList;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Rating> ratingList;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<DetailBook> detailBookList;
 
 }
