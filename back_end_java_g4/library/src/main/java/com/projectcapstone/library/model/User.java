@@ -11,7 +11,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer iduser;
+    private long iduser;
 
     @Column(nullable = false, unique = true)
     private String username;
@@ -26,14 +26,12 @@ public class User {
     @Column(columnDefinition = "varchar(255) default 'https://st.quantrimang.com/photos/image/2017/04/08/anh-dai-dien-FB-200.jpg'")
     private String urlimage;
 
-    @Column(columnDefinition = "int default 1" )
-    private Integer role;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "role", nullable = false ,referencedColumnName = "idrole")
+    private Role role;
 
     @Column(nullable = false, unique = true)
     private String codeuser;
-
-    @Column(columnDefinition = "boolean default true")
-    private boolean status;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<BookEntry> bookEntryList;
@@ -43,6 +41,10 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<OrderBook> orderBookList;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private UserStatus userStatus;
 
 
 }
