@@ -1,10 +1,11 @@
 package com.projectcapstone.library.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "userstatus")
-public class UserStatus {
+public class UserStatus implements Serializable {
     @Id
     @Column(name = "iduser")
     private Long iduser;
