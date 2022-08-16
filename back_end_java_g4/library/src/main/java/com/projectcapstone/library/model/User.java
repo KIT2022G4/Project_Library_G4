@@ -1,14 +1,16 @@
 package com.projectcapstone.library.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Data
 @Entity
 @Table(name = "user")
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long iduser;
@@ -24,7 +26,7 @@ public class User {
     private String email;
 
     private String phone;
-            
+
     private String address;
 
     @Column(columnDefinition = "varchar(255) default 'https://st.quantrimang.com/photos/image/2017/04/08/anh-dai-dien-FB-200.jpg'")
@@ -38,12 +40,15 @@ public class User {
     private String codeuser;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<BookEntry> bookEntryList;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Rating> ratingList;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<OrderBook> orderBookList;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
