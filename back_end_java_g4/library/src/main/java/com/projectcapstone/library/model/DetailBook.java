@@ -1,15 +1,17 @@
 package com.projectcapstone.library.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 
 @Data
 @Entity
 @Table(name = "detailbook")
-public class DetailBook {
+public class DetailBook implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long iddetailbook;
@@ -26,6 +28,7 @@ public class DetailBook {
     private boolean status;
 
     @OneToMany(mappedBy = "detailbook", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<OrderBook> orderBookList;
 
     @Column(nullable = false, unique = true)
