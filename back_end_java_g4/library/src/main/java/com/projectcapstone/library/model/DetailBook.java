@@ -12,7 +12,7 @@ import java.util.List;
 public class DetailBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer iddetailbook;
+    private long iddetailbook;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "codebook", referencedColumnName="codebook", nullable = false)
