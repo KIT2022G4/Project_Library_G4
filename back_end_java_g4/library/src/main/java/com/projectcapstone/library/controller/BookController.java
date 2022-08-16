@@ -56,4 +56,9 @@ public class BookController {
     public Book createBook( @RequestBody Book book) {
         return bookRepository.save(book);
     }
+
+    @GetMapping("/bookByCategory/{id}")
+    public List <Book> getBookByCategory(@PathVariable Long id) {
+        return bookRepository.bookByCategory(id);
+    }
 }
