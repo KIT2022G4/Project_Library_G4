@@ -1,20 +1,24 @@
 package com.projectcapstone.library.model;
 
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.UUID;
 
 @Entity
 @Table(name = "orderbook")
 public class OrderBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idorderbook;
+    private long idorderbook;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumns({
-            @JoinColumn(name = "codedetailbook", nullable = false, referencedColumnName="codedetailbook"),
-            @JoinColumn(name = "codebranch", nullable = false, referencedColumnName="codebranch")
+            @JoinColumn(name = "codedetailbook",nullable = false, referencedColumnName="codedetailbook"),
+            @JoinColumn(name = "codebranch", nullable = false, referencedColumnName="codebranch"),
+            @JoinColumn(name = "codebook", nullable = false, referencedColumnName="codebook")
     })
     private DetailBook detailbook;
 
@@ -31,6 +35,5 @@ public class OrderBook {
     @Column(columnDefinition = "DATE")
     private Date endtime;
 
-    @Column(columnDefinition = "boolean default false")
-    private boolean status;
+    private Integer status;
 }
