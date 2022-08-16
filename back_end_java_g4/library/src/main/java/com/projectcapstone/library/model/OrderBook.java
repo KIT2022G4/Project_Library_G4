@@ -4,12 +4,13 @@ package com.projectcapstone.library.model;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.UUID;
 
 @Entity
 @Table(name = "orderbook")
-public class OrderBook {
+public class OrderBook implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idorderbook;
