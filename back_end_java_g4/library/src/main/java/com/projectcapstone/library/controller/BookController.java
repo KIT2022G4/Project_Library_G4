@@ -22,12 +22,12 @@ public class BookController {
         return bookRepository.findAll();
     }
     @GetMapping("/book/{id}")
-    public ResponseEntity< Book > getUserById(@PathVariable Long id) {
+    public ResponseEntity< Book > getBookById(@PathVariable Long id) {
         Book book = bookRepository.findById(id).orElseThrow();;
         return ResponseEntity.ok(book);
     }
     @PutMapping("/book/{id}")
-    public ResponseEntity < Book > updateUser(@PathVariable Long id, @RequestBody Book bookDetail) {
+    public ResponseEntity < Book > updateBook(@PathVariable Long id, @RequestBody Book bookDetail) {
         Book book = bookRepository.findById(id).orElseThrow();
         book.setBookname(bookDetail.getBookname());
         book.setAuthor(bookDetail.getAuthor());
@@ -43,7 +43,7 @@ public class BookController {
     }
 
     @DeleteMapping("/book/{id}")
-    public ResponseEntity <Map< String, Boolean >> deleteEmployee(@PathVariable Long id) {
+    public ResponseEntity <Map< String, Boolean >> deleteEBook(@PathVariable Long id) {
         Book book = bookRepository.findById(id).orElseThrow();
 
         bookRepository.delete(book);
@@ -53,7 +53,7 @@ public class BookController {
     }
 
     @PostMapping("/book")
-    public Book createEmployee( @RequestBody Book book) {
+    public Book createBook( @RequestBody Book book) {
         return bookRepository.save(book);
     }
 }
