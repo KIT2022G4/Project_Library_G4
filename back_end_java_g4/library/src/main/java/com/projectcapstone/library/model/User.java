@@ -32,22 +32,22 @@ public class User implements Serializable {
     @Column(columnDefinition = "varchar(255) default 'https://st.quantrimang.com/photos/image/2017/04/08/anh-dai-dien-FB-200.jpg'")
     private String urlimage;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "role", nullable = false ,referencedColumnName = "idrole")
     private Role role;
 
     @Column(nullable = false, unique = true)
     private String codeuser;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<BookEntry> bookEntryList;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Rating> ratingList;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<OrderBook> orderBookList;
 
