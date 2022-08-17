@@ -1,17 +1,19 @@
 package com.projectcapstone.library.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
-
+@Data
 @Entity
 @Table(name = "userstatus")
 public class UserStatus implements Serializable {
     @Id
     @Column(name = "iduser")
-    private Long iduser;
+    private long iduser;
 
-    @OneToOne(cascade = CascadeType.ALL, optional = false)
+    @OneToOne(optional = false)
     @PrimaryKeyJoinColumn(name = "iduser", referencedColumnName = "iduser")
     private User user;
 
@@ -22,6 +24,6 @@ public class UserStatus implements Serializable {
 
     private Integer crime;
 
-    @Column(columnDefinition = "DATE")
+    @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date timeupdate;
 }
