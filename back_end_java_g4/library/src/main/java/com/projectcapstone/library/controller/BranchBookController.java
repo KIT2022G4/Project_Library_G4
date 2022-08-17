@@ -25,15 +25,15 @@ public class BranchBookController {
 
     @PostMapping("/branchBook")
     public BranchBook createBranchBook(@RequestBody BranchBook branchBook) {
-        BranchBook bb = branchBookRepository.save(branchBook);
-        for(int i = 1; i<= branchBook.getCount();i++){
-            DetailBook db = new DetailBook();
-            db.setBook(branchBook.getBook());
-            db.setBranch(branchBook.getBranch());
-            db.setCodedetailbook(branchBook.getBook().getCodebook() + i);
-            detailBookRepository.save(db);
-        }
-        return bb;
+//        BranchBook bb = branchBookRepository.save(branchBook);
+//        for(int i = 1; i<= branchBook.getCount();i++){
+//            DetailBook db = new DetailBook();
+//            db.setBook(branchBook.getBook());
+//            db.setBranch(branchBook.getBranch());
+//            db.setCodedetailbook(branchBook.getBook().getCodebook() + i);
+//            detailBookRepository.save(db);
+//        }
+        return branchBookRepository.save(branchBook);
     }
 
     @GetMapping("/branchBookByIdBook/{id}")
