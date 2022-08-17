@@ -10,6 +10,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface BranchBookRepository extends JpaRepository<BranchBook, IdBranchBook> {
-    @Query("select brb from BranchBook brb where brb.book.codebook = ?1")
-    List<BranchBook> branchBookByCodeBook(String codeBook);
+    @Query("select brb from BranchBook brb where brb.book.idbook = ?1")
+    List<BranchBook> branchBookByCodeBook(Long codeBook);
+
+    @Query("select brb from BranchBook brb where brb.branch.idbranch = ?1")
+    List<BranchBook> branchBookByCodeBranch(Long codeBranch);
 }
