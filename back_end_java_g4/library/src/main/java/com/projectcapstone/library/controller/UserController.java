@@ -2,7 +2,9 @@ package com.projectcapstone.library.controller;
 
 
 import com.projectcapstone.library.model.User;
+import com.projectcapstone.library.model.UserStatus;
 import com.projectcapstone.library.repository.UserRepository;
+import com.projectcapstone.library.repository.UserStatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +23,14 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private UserStatusRepository userStatusRepository;
+
     @GetMapping("/user")
     public List < User > getAllUsers() {
         return userRepository.findAll();
     }
-        @GetMapping("/user/{id}")
+    @GetMapping("/user/{id}")
     public ResponseEntity< User > getUserById(@PathVariable Long id) {
         User user = userRepository.findById(id).orElseThrow();;
         return ResponseEntity.ok(user);
@@ -55,7 +60,16 @@ public class UserController {
 
     @PostMapping("/user")
     public User createEmployee(@RequestBody User user) {
-        return userRepository.save(user);
+        User u = userRepository.save(user);
+        if(user.getRole().getIdrole() < 4){
+            UserStatus us = new UserStatus();
+            us.setIduser(u.getIduser());
+            if(u.getRole().getIdrole() == 1){
+                us.setRemainingbook(3);
+            }
+            userStatusRepository.save(us);
+        }
+        return u;
     }
 
     @GetMapping("/login")
@@ -71,4 +85,5 @@ public class UserController {
         User updatedUser = userRepository.save(user);
         return ResponseEntity.ok(updatedUser);
     }
+
 }
