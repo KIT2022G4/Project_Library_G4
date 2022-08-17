@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface OrderBookRepository extends JpaRepository<OrderBook, Long> {
-    @Query("select odb from OrderBook odb where odb.user.codeuser = ?1 ")
-    List<OrderBook> orderBookByCodeUser(String codeUser);
+    @Query("select odb from OrderBook odb where odb.user.iduser = ?1 ")
+    List<OrderBook> orderBookByCodeUser(Long codeUser);
 }
