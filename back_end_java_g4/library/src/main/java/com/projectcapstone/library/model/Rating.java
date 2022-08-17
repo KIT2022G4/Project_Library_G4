@@ -17,11 +17,11 @@ public class Rating implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idrating;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "codebook", nullable = false, referencedColumnName="codebook")
     private Book book;
 
