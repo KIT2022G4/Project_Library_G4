@@ -1,6 +1,7 @@
 package com.projectcapstone.library.model;
 
 
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.io.Serializable;
 import java.sql.Date;
 import java.util.UUID;
 
+@Data
 @Entity
 @Table(name = "orderbook")
 public class OrderBook implements Serializable {
@@ -15,7 +17,7 @@ public class OrderBook implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idorderbook;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumns({
             @JoinColumn(name = "codedetailbook",nullable = false, referencedColumnName="codedetailbook"),
             @JoinColumn(name = "codebranch", nullable = false, referencedColumnName="codebranch"),
@@ -23,7 +25,7 @@ public class OrderBook implements Serializable {
     })
     private DetailBook detailbook;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
     private User user;
 
