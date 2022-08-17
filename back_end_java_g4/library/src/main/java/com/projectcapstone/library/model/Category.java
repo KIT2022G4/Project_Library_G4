@@ -19,8 +19,8 @@ public class Category implements Serializable {
     @Column(nullable = false, unique = true)
         private String categoryname;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Book> books;
+    private List<Book> bookList;
 }
 
