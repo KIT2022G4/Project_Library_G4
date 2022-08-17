@@ -22,7 +22,7 @@ public class BookEntry implements Serializable {
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date dor;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
     private User user;
 
