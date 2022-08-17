@@ -17,14 +17,6 @@
 .product__details__pic__slider.owl-carousel .owl-item img {
     width: auto;
 }
-.product__details__text {
-    position: relative;
-}
-
-.product__details__text button {
-    position: absolute;
-    right: 0;
-}
 
 .product__details__text h3 {
     color: #252525;
