@@ -24,9 +24,12 @@ public class BranchBookController {
         return branchBookRepository.save(branchBook);
     }
 
-    @GetMapping("/branchBookByCodeBook")
-    public List<BranchBook> getAllBranchBookByCodeBook(@RequestParam String codeBook) {
-        return branchBookRepository.branchBookByCodeBook(codeBook);
+    @GetMapping("/branchBookByIdBook/{id}")
+    public List<BranchBook> getAllBranchBookByCodeBook(@PathVariable Long id) {
+        return branchBookRepository.branchBookByCodeBook(id);
     }
-
+    @GetMapping("/branchBookByIdBranch/{id}")
+    public List<BranchBook> getAllBranchBookByCodeBranch(@PathVariable Long id) {
+        return branchBookRepository.branchBookByCodeBranch(id);
+    }
 }
