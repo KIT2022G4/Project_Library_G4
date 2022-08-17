@@ -23,7 +23,7 @@ public class BookController {
     }
     @GetMapping("/book/{id}")
     public ResponseEntity< Book > getBookById(@PathVariable Long id) {
-        Book book = bookRepository.findById(id).orElseThrow();;
+        Book book = bookRepository.findById(id).orElseThrow();
         return ResponseEntity.ok(book);
     }
     @PutMapping("/book/{id}")
@@ -43,7 +43,7 @@ public class BookController {
     }
 
     @DeleteMapping("/book/{id}")
-    public ResponseEntity <Map< String, Boolean >> deleteEBook(@PathVariable Long id) {
+    public ResponseEntity <Map< String, Boolean >> deleteBook(@PathVariable Long id) {
         Book book = bookRepository.findById(id).orElseThrow();
 
         bookRepository.delete(book);
