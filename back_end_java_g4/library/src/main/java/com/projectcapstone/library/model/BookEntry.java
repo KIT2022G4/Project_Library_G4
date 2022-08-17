@@ -18,7 +18,6 @@ public class BookEntry implements Serializable {
 
     private String author;
 
-//    date of requirements
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date dor;
 
