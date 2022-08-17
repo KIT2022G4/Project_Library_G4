@@ -16,18 +16,18 @@ public class DetailBook implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long iddetailbook;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "codebook", referencedColumnName="codebook", nullable = false)
     private Book book;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "codebranch", referencedColumnName="codebranch", nullable = false)
     private Branch branch;
 
     @Column(columnDefinition = "boolean default true")
     private boolean status;
 
-    @OneToMany(mappedBy = "detailbook", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "detailbook",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<OrderBook> orderBookList;
 
