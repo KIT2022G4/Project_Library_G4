@@ -36,7 +36,7 @@ public class Book implements Serializable {
     @Column(nullable = false, unique = true)
     private String codebook;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "idcategory", nullable = false)
     private Category category;
 
@@ -44,11 +44,11 @@ public class Book implements Serializable {
     @JsonIgnore
     private List<BranchBook> branchBookList;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "book",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Rating> ratingList;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "book",cascade = CascadeType.ALL)
     @JsonIgnore
     private List<DetailBook> detailBookList;
 
