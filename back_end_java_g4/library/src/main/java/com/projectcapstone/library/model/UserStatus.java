@@ -1,5 +1,7 @@
 package com.projectcapstone.library.model;
 
+
+
 import lombok.Data;
 
 import javax.persistence.*;
@@ -22,8 +24,11 @@ public class UserStatus implements Serializable {
     @Column(columnDefinition = "boolean default true")
     private boolean status;
 
+    @Column(columnDefinition = "int default 0")
     private Integer crime;
 
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date timeupdate;
+
+
 }
