@@ -2,6 +2,7 @@ package com.projectcapstone.library.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Date;
 
 @Entity
 @Table(name = "userstatus")
@@ -10,9 +11,8 @@ public class UserStatus implements Serializable {
     @Column(name = "iduser")
     private Long iduser;
 
-    @OneToOne
-    @MapsId
-    @JoinColumn(name = "iduser")
+    @OneToOne(cascade = CascadeType.ALL, optional = false)
+    @PrimaryKeyJoinColumn(name = "iduser", referencedColumnName = "iduser")
     private User user;
 
     private Integer remainingbook;
@@ -22,4 +22,6 @@ public class UserStatus implements Serializable {
 
     private Integer crime;
 
+    @Column(columnDefinition = "DATE")
+    private Date timeupdate;
 }
