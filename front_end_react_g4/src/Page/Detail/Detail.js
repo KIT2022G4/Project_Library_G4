@@ -53,7 +53,7 @@ const Detail = () => {
                                         </div>
                                     </li>
                                 </ul>
-                                <button class="btn btn-outline-danger text-right">Mượn sách</button>
+                                <button class="btn btn-outline-danger">Mượn sách</button>
                             </div>
                         </div>
                         <div class="col-lg-12">
