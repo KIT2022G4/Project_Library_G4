@@ -21,9 +21,9 @@ public class OrderBookController {
         return orderBookRepository.findAll();
     }
 
-    @GetMapping("/oderBookByCodeUser")
-    public List<OrderBook> getAllOrderBooksByCodeUser(@RequestParam String codeUser) {
-        return orderBookRepository.orderBookByCodeUser(codeUser);
+    @GetMapping("/oderBook/{id}")
+    public List<OrderBook> getAllOrderBooksByCodeUser(@PathVariable Long id) {
+        return orderBookRepository.orderBookByCodeUser(id);
     }
     @PostMapping("/oderBook")
     public OrderBook createOrderBook(@RequestBody OrderBook oderBook) {
