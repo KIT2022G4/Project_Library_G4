@@ -8,14 +8,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-   {/* <BrowserRouter>
+   <BrowserRouter>
     <Routes>
       <Route path="/" element={<ListProduct />} />
       <Route path="login" element={<Login />} />
       <Route path="profile" element={<Profile />} />
       <Route path="signup" element={<SignUp />} />
     </Routes>
-  </BrowserRouter> */}
+  </BrowserRouter>
     </>
   );
 }
