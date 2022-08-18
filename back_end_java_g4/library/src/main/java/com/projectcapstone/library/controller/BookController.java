@@ -2,6 +2,7 @@ package com.projectcapstone.library.controller;
 
 import com.projectcapstone.library.model.Book;
 import com.projectcapstone.library.repository.BookRepository;
+import com.projectcapstone.library.repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
