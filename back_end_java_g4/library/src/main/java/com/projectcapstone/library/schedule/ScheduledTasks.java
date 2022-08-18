@@ -24,8 +24,8 @@ public class ScheduledTasks {
 
 
 
-    @Scheduled(fixedDelay = 10000)
-//    @Scheduled(cron = "0 0 0 * * ?")
+//    @Scheduled(fixedDelay = 10000)
+    @Scheduled(cron = "0 0 0 * * ?")
     public void updateUserStatus(){
         List<OrderBook> orderBookList = orderBookRepository.listOrderBookLate();
         Date now = new Date(new java.util.Date().getTime());
