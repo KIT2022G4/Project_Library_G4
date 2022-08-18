@@ -1,5 +1,6 @@
 package com.projectcapstone.library.controller;
 
+
 import com.projectcapstone.library.model.Rating;
 import com.projectcapstone.library.repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,10 @@ public class RatingController {
     @Autowired
     private RatingRepository ratingRepository;
 
-    @GetMapping("/rating")
-    public List<Rating> getAllRatings() {
-        return ratingRepository.findAll();
+    @GetMapping("/rating/{id}")
+    public List<Rating> getRatingByIdBook(@PathVariable Long id) {
+        List<Rating> rating = ratingRepository.ratingListByIdBook(id);
+        return rating;
     }
 
     @PostMapping("/rating")
