@@ -22,27 +22,25 @@ public class ScheduledTasks {
     @Autowired
     private OrderBookRepository orderBookRepository;
 
-    @Autowired
-    private UserRepository userRepository;
 
-    @Scheduled(fixedDelay = 10000)
+
+//    @Scheduled(fixedDelay = 10000)
+    @Scheduled(cron = "0 0 0 * * ?")
     public void updateUserStatus(){
-//        List<OrderBook> orderBookList = orderBookRepository.findAll();
-//        for (OrderBook o: orderBookList){
-//            System.out.println(o.toString());
-//        }
+        List<OrderBook> orderBookList = orderBookRepository.listOrderBookLate();
         Date now = new Date(new java.util.Date().getTime());
-//        for(OrderBook ob:orderBookList){
-//            UserStatus us = userStatusRepository.getById(ob.getUser().getIduser());
-//            System.out.println(ob.toString());
-//            if(us.getTimeupdate().before(now)){
-//                us.setCrime(us.getCrime() + 1);
-//                us.setTimeupdate(now);
-//                us.setStatus(false);
-//                userStatusRepository.save(us);
-//            }
-//        }
-//
+        for(OrderBook ob:orderBookList){
+            UserStatus us = userStatusRepository.findById(ob.getUser().getIduser()).orElseThrow();
+            if(us != null){
+                if(us.getTimeupdate().before(now)){
+                    us.setCrime(us.getCrime() + 1);
+                    us.setTimeupdate(now);
+                    us.setStatus(false);
+                    userStatusRepository.save(us);
+                }
+            }
+        }
+
         List<UserStatus> userStatusList = userStatusRepository.listUserStatus();
         for (UserStatus us:userStatusList){
             Integer check = us.getCrime() - 1;
