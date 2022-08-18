@@ -7,12 +7,13 @@ import SignUp from './Page/SignUp/SignUp';
 import Profile from './Page/Profile/Profile';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home_guess from "./Page/Home/home_guess";
+import Userlayout from "./Page/UserLayout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/">
+        <Route path="/" element={<Userlayout/>}>
           <Route index element={<Home_guess />} />
           <Route path="detail" element={<Detail />} />
           {/* <Route path="edit" element={<Customers />} /> */}
