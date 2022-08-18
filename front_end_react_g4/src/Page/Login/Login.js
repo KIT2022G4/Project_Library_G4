@@ -23,7 +23,7 @@ const Login = () => {
                                 </label>
                             </div>
 
-                            <div class="container form1" style="background-color:#f1f1f1">
+                            <div class="container form1" style={{backgroundColor: "f1f1f1"}}>
                                 <button type="button" class="cancelbtn">Cancel</button>
                                 <span class="psw">Forgot <a href="#">password?</a></span>
                             </div>
