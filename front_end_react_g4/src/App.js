@@ -1,5 +1,4 @@
 import React from "react";
-import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home_guess from './Page/Home/home_guess';
 import Detail from './Page/Detail/Detail';
