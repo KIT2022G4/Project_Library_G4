@@ -2,7 +2,7 @@ import './Profile.css';
 const Profile = () => {
     return (
         <>
-            <div class="container emp-profile">
+            <div class="container emp-profile" style="background: -webkit-linear-gradient(left, #3931af, #00c6ff);">
                 <form method="post">
                     <div class="row">
                         <div class="col-md-4">
