@@ -15,7 +15,7 @@ public class UserStatus implements Serializable {
     @Column(name = "iduser")
     private long iduser;
 
-    @OneToOne(optional = false)
+    @OneToOne(cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn(name = "iduser", referencedColumnName = "iduser")
     private User user;
 
