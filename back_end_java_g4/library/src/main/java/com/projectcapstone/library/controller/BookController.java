@@ -62,4 +62,9 @@ public class BookController {
     public List <Book> getBookByCategory(@PathVariable Long id) {
         return bookRepository.bookByCategory(id);
     }
+
+    @GetMapping("/numberBookByCategory/{id}")
+    public Integer getNumberBookByCategory(@PathVariable Long id) {
+        return bookRepository.numberBookByCategory(id);
+    }
 }
