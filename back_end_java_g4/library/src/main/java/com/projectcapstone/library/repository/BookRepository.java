@@ -12,4 +12,7 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book, Long> {
     @Query("select b from Book b where b.category.idcategory = ?1 ")
     List<Book> bookByCategory(Long idCategory);
+
+    @Query("select count(b) from Book b where b.category.idcategory = ?1 ")
+    Integer numberBookByCategory(Long idCategory);
 }
