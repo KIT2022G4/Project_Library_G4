@@ -21,8 +21,8 @@ public class BookEntry implements Serializable {
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date dor;
 
-    @ManyToOne
-    @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "iduser", nullable = false, referencedColumnName="iduser")
     private User user;
 
 
