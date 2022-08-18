@@ -64,8 +64,14 @@ public class UserController {
         if(user.getRole().getIdrole() < 4){
             UserStatus us = new UserStatus();
             us.setIduser(u.getIduser());
-            if(u.getRole().getIdrole() == 1){
+            us.setStatus(true);
+            us.setTimeupdate(new java.sql.Date(new java.util.Date().getTime()));
+            us.setCrime(0);
+            if(u.getRole().getIdrole() == 1 || u.getRole().getIdrole() == 3){
                 us.setRemainingbook(3);
+            }
+            if(u.getRole().getIdrole() == 2){
+                us.setRemainingbook(5);
             }
             userStatusRepository.save(us);
         }
