@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
 import java.util.List;
 
 @CrossOrigin(origins="http://localhost:3000")
@@ -84,6 +85,7 @@ public class OrderBookController {
     public ResponseEntity<OrderBook> giveBack(@PathVariable Long id) {
         OrderBook oderBook = orderBookRepository.findById(id).orElseThrow();
         oderBook.setStatus(3);
+        oderBook.setEndtime(new Date(new java.util.Date().getTime()));
         OrderBook updatedOrderBook = orderBookRepository.save(oderBook);
         UserStatus userStatus = userStatusRepository.findById(oderBook.getUser().getIduser()).orElseThrow();
         userStatus.setRemainingbook(userStatus.getRemainingbook() + 1);
