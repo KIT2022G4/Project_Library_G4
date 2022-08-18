@@ -21,9 +21,12 @@ public class ScheduledTasks {
     private OrderBookRepository orderBookRepository;
 
 
-//    @Scheduled(fixedDelay = 1000)
-//    public void updateUserStatus(){
-//        List<OrderBook> orderBookList = orderBookRepository.listOrderBookLate();
+    @Scheduled(fixedDelay = 1000)
+    public void updateUserStatus(){
+        List<OrderBook> orderBookList = orderBookRepository.listOrderBookLate();
+        for (OrderBook o: orderBookList){
+            System.out.println(o.toString());
+        }
 //        Date now = new Date(new java.util.Date().getTime());
 //        for(OrderBook ob:orderBookList){
 //            UserStatus us = userStatusRepository.getById(ob.getUser().getIduser());
@@ -49,5 +52,5 @@ public class ScheduledTasks {
 //            }
 //            userStatusRepository.save(us);
 //        }
-//    }
+    }
 }
