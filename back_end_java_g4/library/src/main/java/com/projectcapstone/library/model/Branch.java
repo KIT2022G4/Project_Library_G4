@@ -19,10 +19,6 @@ public class Branch implements Serializable {
     @Column(nullable = false)
     private String branchname;
 
-    @OneToMany(mappedBy = "branch",cascade = CascadeType.ALL)
-    @JsonIgnore
-    private List<BranchBook> branchBookList;
-
     @Column(nullable = false, unique = true)
     private String codebranch;
 }
