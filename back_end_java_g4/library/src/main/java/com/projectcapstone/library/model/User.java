@@ -51,4 +51,7 @@ public class User implements Serializable {
     @JsonIgnore
     private List<OrderBook> orderBookList;
 
+    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
+    @JsonIgnore
+    private UserStatus userStatus;
 }
