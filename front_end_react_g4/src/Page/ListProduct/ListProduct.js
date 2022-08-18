@@ -1,5 +1,6 @@
 import './ListProduct.css';
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const ListProduct = () => {
     return (
@@ -93,7 +94,10 @@ const ListProduct = () => {
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
+                                            <Link to="/detail">
                                             <h5 class="card-title">Thi hành án chính ở Việt Nam - Lý luận và thực tiễn</h5>
+                                            </Link>
+                                        
                                             <ul class="address">
                                                 <li>
                                                     <label class="cola-md-12">Nhà xuất bản:</label>

@@ -2,9 +2,13 @@
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
   } */
   /* Bordered form */
+  .form_while{
+    width: 100%;
+  }
   form {
       border: 3px solid #f1f1f1;
       background: #fff;
+      width: 100%;
     }
     
     /* Full-width inputs */

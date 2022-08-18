@@ -4,7 +4,7 @@ const SignUp = () => {
         <>
             <div class="container form">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-sm-12 form_while">
                         <form action="action_page.php" method="post">
                             <div class="container title">
                                 <h1>Register</h1>
@@ -25,7 +25,7 @@ const SignUp = () => {
                                 </label>
                             </div>
 
-                            <div class="container form1" style={{backgroundColor: "#f1f1f1"}}>
+                            <div class="container form1" style={{ backgroundColor: "#f1f1f1" }}>
                                 <button type="button" class="cancelbtn">Cancel</button>
 
                             </div>

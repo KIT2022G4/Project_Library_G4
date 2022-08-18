@@ -2,7 +2,15 @@ import './Profile.css';
 const Profile = () => {
     return (
         <>
-            <div class="container emp-profile" style={{background: "-webkit-linear-gradient(left, #3931af, #00c6ff)"}}>
+            <div class="container emp-profile" style={{ background: "-webkit-linear-gradient(left, #3931af, #00c6ff)" }}>
+                {/* Breadcrumb  */}
+                <nav style={{}} aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Hồ sơ</li>
+                    </ol>
+                </nav>
+                {/*End of breadcrumb */}
                 <form method="post">
                     <div class="row">
                         <div class="col-md-4">
@@ -10,7 +18,7 @@ const Profile = () => {
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
                                     alt="" />
                                 <div class="file btn btn-lg btn-primary">
-                                    Change Photo
+                                    Thay đổi hình ảnh
                                     <input type="file" name="file" />
                                 </div>
                             </div>
@@ -21,13 +29,12 @@ const Profile = () => {
                                     Trần Thu Trà
                                 </h5>
                                 <h6>
-                                    Student
+                                    Học sinh
                                 </h6>
-                                <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                            aria-controls="home" aria-selected="true">About</a>
+                                            aria-controls="home" aria-selected="true">Thông tin</a>
                                     </li>
 
                                 </ul>
@@ -45,7 +52,7 @@ const Profile = () => {
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label>User Id</label>
+                                            <label>ID Độc giả</label>
                                         </div>
                                         <div class="col-md-6">
                                             <p>ThuTra123</p>
@@ -53,7 +60,7 @@ const Profile = () => {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label>Name</label>
+                                            <label>Họ Và Tên</label>
                                         </div>
                                         <div class="col-md-6">
                                             <p>Trần Thu Trà</p>
@@ -69,7 +76,7 @@ const Profile = () => {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label>Phone</label>
+                                            <label>Số điện thoại</label>
                                         </div>
                                         <div class="col-md-6">
                                             <p>123 456 7890</p>
@@ -77,10 +84,49 @@ const Profile = () => {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label>Profession</label>
+                                            <label>Nghề nghiệp</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Student</p>
+                                            <p>Học sinh </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form method="post">
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="tab-content profile-tab" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Số sách đang mượn</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>20</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Số sách đã trả</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>5</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Tổng số sách đã mượn</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>25</p>
                                         </div>
                                     </div>
                                 </div>
