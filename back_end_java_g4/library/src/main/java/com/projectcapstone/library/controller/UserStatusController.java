@@ -1,8 +1,7 @@
 package com.projectcapstone.library.controller;
 
-import com.projectcapstone.library.model.Rating;
+import com.projectcapstone.library.model.Book;
 import com.projectcapstone.library.model.UserStatus;
-import com.projectcapstone.library.repository.RatingRepository;
 import com.projectcapstone.library.repository.UserStatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +20,4 @@ public class UserStatusController {
         return userStatusRepository.findAll();
     }
 
-    @PostMapping("/userStatus")
-    public UserStatus createUserStatus(@RequestBody UserStatus userStatus) {
-        return userStatusRepository.save(userStatus);
-    }
 }
