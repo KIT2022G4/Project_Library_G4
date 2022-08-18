@@ -25,4 +25,8 @@ public class DetailBookController {
     public DetailBook createDetailBook(@RequestBody DetailBook detailBook) {
         return detailBookRepository.save(detailBook);
     }
+    @GetMapping("/detailBook/")
+    public List<DetailBook> getDetailBook(@RequestParam Long idBook, @RequestParam Long idBranch) {
+        return detailBookRepository.detailBook(idBook,idBranch);
+    }
 }
