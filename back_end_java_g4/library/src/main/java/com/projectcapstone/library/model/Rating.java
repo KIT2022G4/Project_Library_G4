@@ -18,11 +18,11 @@ public class Rating implements Serializable {
     private long idrating;
 
     @ManyToOne
-    @JoinColumn(name = "codeuser", nullable = false, referencedColumnName="codeuser")
+    @JoinColumn(name = "iduser", nullable = false, referencedColumnName="iduser")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "codebook", nullable = false, referencedColumnName="codebook")
+    @JoinColumn(name = "idbook", nullable = false, referencedColumnName="idbook")
     private Book book;
 
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
