@@ -21,36 +21,36 @@ public class ScheduledTasks {
     private OrderBookRepository orderBookRepository;
 
 
-    @Scheduled(fixedDelay = 1000)
-    public void updateUserStatus(){
-        List<OrderBook> orderBookList = orderBookRepository.listOrderBookLate();
-        for (OrderBook o: orderBookList){
-            System.out.println(o.toString());
-        }
-//        Date now = new Date(new java.util.Date().getTime());
-//        for(OrderBook ob:orderBookList){
-//            UserStatus us = userStatusRepository.getById(ob.getUser().getIduser());
-//            System.out.println(ob.toString());
-//            if(us.getTimeupdate().before(now)){
-//                us.setCrime(us.getCrime() + 1);
-//                us.setTimeupdate(now);
-//                us.setStatus(false);
-//                userStatusRepository.save(us);
-//            }
+//    @Scheduled(fixedDelay = 1000)
+//    public void updateUserStatus(){
+//        List<OrderBook> orderBookList = orderBookRepository.listOrderBookLate();
+//        for (OrderBook o: orderBookList){
+//            System.out.println(o.toString());
 //        }
-//
-//        List<UserStatus> userStatusList = userStatusRepository.listUserStatus();
-//        for (UserStatus us:userStatusList){
-//            Integer check = us.getCrime() - 1;
-//            if(check > 0){
-//                us.setCrime(check);
-//                us.setTimeupdate(now);
-//            }else {
-//                us.setCrime(0);
-//                us.setStatus(true);
-//                us.setTimeupdate(now);
-//            }
-//            userStatusRepository.save(us);
-//        }
-    }
+////        Date now = new Date(new java.util.Date().getTime());
+////        for(OrderBook ob:orderBookList){
+////            UserStatus us = userStatusRepository.getById(ob.getUser().getIduser());
+////            System.out.println(ob.toString());
+////            if(us.getTimeupdate().before(now)){
+////                us.setCrime(us.getCrime() + 1);
+////                us.setTimeupdate(now);
+////                us.setStatus(false);
+////                userStatusRepository.save(us);
+////            }
+////        }
+////
+////        List<UserStatus> userStatusList = userStatusRepository.listUserStatus();
+////        for (UserStatus us:userStatusList){
+////            Integer check = us.getCrime() - 1;
+////            if(check > 0){
+////                us.setCrime(check);
+////                us.setTimeupdate(now);
+////            }else {
+////                us.setCrime(0);
+////                us.setStatus(true);
+////                us.setTimeupdate(now);
+////            }
+////            userStatusRepository.save(us);
+////        }
+//    }
 }
