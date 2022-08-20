@@ -6,6 +6,15 @@
     padding: 250px 0 300px;
 }
 
+.search-form .form-control {
+    width: 60%;
+}
+
+.search-form .form-floating {
+    width: 90%;
+    margin-left: 10px;
+}
+
 .hero-text {
     position: relative;
 }
@@ -155,4 +164,17 @@
     text-decoration: none;
     color: #1c5599;
     font-size: 16px;
+}
+
+.items-grid {
+    background: #d7f3ff;
+}
+
+.notification {
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.notification .mar-left {
+    margin-left: 16px;
 }
