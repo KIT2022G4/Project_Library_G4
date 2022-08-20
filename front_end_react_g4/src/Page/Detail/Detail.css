@@ -21,6 +21,16 @@
     position: relative;
 }
 
+.product__details__rating{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.product__details__rating i {
+    margin-right: -2px;
+    color: #EDBB0E;
+}
+
 .product__details__text button {
     position: absolute;
     right: 0;
