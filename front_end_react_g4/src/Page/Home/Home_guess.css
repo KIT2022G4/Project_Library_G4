@@ -7,12 +7,15 @@
 }
 
 .search-form .form-control {
-    width: 60%;
+    width: 63%;
 }
 
 .search-form .form-floating {
-    width: 90%;
-    margin-left: 10px;
+    width: 96%;
+}
+
+.search-form button {
+    width: 10%;
 }
 
 .hero-text {
@@ -174,6 +177,10 @@
     background-color: #fff;
     border-radius: 40px;
 }
+
+/* .notification p {
+    text-align: center;
+} */
 
 .notification .mar-left {
     margin-left: 16px;
