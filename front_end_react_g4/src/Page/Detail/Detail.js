@@ -87,7 +87,7 @@ const Detail = () => {
                                 <form class="row g-3">
                                     <div class="col-md-6">
                                         <label for="username" class="form-label">Tên người dùng</label>
-                                        <input type="text" class="form-control" id="username">
+                                        <input type="text" class="form-control" id="username"></input>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputPassword4" class="form-label">Đánh giá số sao</label>
@@ -101,7 +101,7 @@ const Detail = () => {
                                     </div>
                                     <div class="col-12">
                                         <label for="comment" class="form-label">Bình luận</label>
-                                        <input type="text" class="form-control" id="comment">
+                                        <input type="text" class="form-control" id="comment"></input>
                                     </div>
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary">Bình luận</button>
