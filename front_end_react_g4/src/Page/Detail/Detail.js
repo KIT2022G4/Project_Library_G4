@@ -46,11 +46,11 @@ const Detail = () => {
                                     Tác giả: Nguyễn Đình Khang
                                 </div>
                                 <div className="product__details__rating">
-                                    <i class="fas fa-star" style="color: #EDBB0E;"></i>
-                                    <i class="fas fa-star" style="color: #EDBB0E;"></i>
-                                    <i class="fas fa-star" style="color: #EDBB0E;"></i>
-                                    <i class="fas fa-star" style="color: #EDBB0E;"></i>
-                                    <i class="fas fa-star-half" style="color: #EDBB0E;"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half"></i>
                                 </div>
                                 <ul>
                                     <li><b>Chi nhánh còn sách</b> <span>Hà Nội</span></li>
