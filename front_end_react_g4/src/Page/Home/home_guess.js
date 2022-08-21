@@ -32,22 +32,6 @@ const Home_guess = () => {
                                     </div>
                                 </nav>
                             </div>
-                            {/* <div class="search-form">
-                                <form class="d-flex">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search"></input>
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="floatingSelectGrid"
-                                                aria-label="Floating label select example">
-                                                <option selected>Tên sách</option>
-                                                <option value="1">Tên tác giả</option>
-                                            </select>
-                                            <label for="floatingSelectGrid">Tìm kiếm theo</label>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                            </div> */}
                         </div>
                     </div>
                 </div>
