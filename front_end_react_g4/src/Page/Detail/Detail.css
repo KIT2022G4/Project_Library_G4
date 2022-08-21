@@ -17,9 +17,6 @@
 .product__details__pic__slider.owl-carousel .owl-item img {
     width: auto;
 }
-.product__details__text {
-    position: relative;
-}
 
 .product__details__rating{
     font-size: 14px;
@@ -32,8 +29,7 @@
 }
 
 .product__details__text button {
-    position: absolute;
-    right: 0;
+    width: auto;
 }
 
 .product__details__text h3 {
