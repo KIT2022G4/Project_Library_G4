@@ -1,11 +1,21 @@
 import './Detail.css';
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const Detail = () => {
     return (
         <>
             <section class="product-details spad">
                 <div class="container">
+                    {/* Breadcrumb  */}
+                    <nav style={{}} aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to="/"><a href="#">Trang chủ</a></Link></li>
+                            <li class="breadcrumb-item"><Link to="/listproduct"><a href="# ">Thư viện sách</a></Link></li>
+                            <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
+                        </ol>
+                    </nav>
+                    {/*End of breadcrumb */}
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="product__details__pic">

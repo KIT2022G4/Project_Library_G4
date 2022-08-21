@@ -1,4 +1,6 @@
 import './Profile.css';
+import {Link} from "react-router-dom";
+
 const Profile = () => {
     return (
         <>
@@ -6,7 +8,7 @@ const Profile = () => {
                 {/* Breadcrumb  */}
                 <nav style={{}} aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><Link to="/"><a href="#">Trang chủ</a></Link></li>
                         <li class="breadcrumb-item active" aria-current="page">Hồ sơ</li>
                     </ol>
                 </nav>

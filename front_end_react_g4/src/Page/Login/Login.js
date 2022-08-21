@@ -1,4 +1,7 @@
 import './Login.css';
+import { Link } from "react-router-dom";
+
+
 const Login = () => {
     return (
         <>
@@ -6,7 +9,7 @@ const Login = () => {
                 {/* Breadcrumb  */}
                 <nav style={{}} aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><Link to="/"><a href="#">Trang chủ</a></Link></li>
                         <li class="breadcrumb-item active" aria-current="page">Đăng nhập</li>
                     </ol>
                 </nav>
@@ -20,17 +23,22 @@ const Login = () => {
 
                             <div class="container form1">
                                 <label for="uname"><b>Tên tài khoản</b></label>
-                                <input type="text" placeholder="Enter Username" name="uname" required />
+                                <input class="d-flex justify-content-start" type="text" placeholder="Enter Username" name="uname" required />
 
                                 <label for="psw"><b>Mật khẩu</b></label>
                                 <input type="password" placeholder="Enter Password" name="psw" required />
 
-                                <button type="submit">Đăng nhập</button>
                                 <label>
                                     <input type="checkbox" checked="checked" name="remember" /> Remember me
                                 </label>
-                            </div>
+                                <br></br>
+                                <button class="login-bt btn btn-primary" type="button">Đăng nhập</button>
 
+                                <p>Not a member?
+                                    <Link to="/signup"><a href="#!">Register</a></Link>
+                                </p>
+
+                            </div>
                             <div class="container form1" style={{ backgroundColor: "f1f1f1" }}>
                                 <button type="button" class="cancelbtn">Thoát</button>
                                 <span class="psw">Quên <a href="#">mật khẩu?</a></span>

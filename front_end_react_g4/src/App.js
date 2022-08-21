@@ -17,7 +17,6 @@ function App() {
         <Route path="/" element={<Userlayout/>}>
           <Route index element={<Home_guess />} />
           <Route path="detail" element={<Detail />} />
-          {/* <Route path="edit" element={<Customers />} /> */}
           <Route path="listproduct" element={<ListProduct />} />
           <Route path="login" element={<Login />} />
           <Route path="profile" element={<Profile />} />

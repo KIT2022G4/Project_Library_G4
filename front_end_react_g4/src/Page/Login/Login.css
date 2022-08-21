@@ -8,7 +8,6 @@
   form {
       border: 3px solid #f1f1f1;
       background: #fff;
-      width: 100%;
     }
     
     /* Full-width inputs */
@@ -90,4 +89,8 @@
     }
     .title{
       text-align: center;
+    }
+    .login-bt{
+      width: 200px;
+
     }

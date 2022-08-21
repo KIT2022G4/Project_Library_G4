@@ -1,6 +1,6 @@
 import './ListProduct.css';
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const ListProduct = () => {
     return (
@@ -10,24 +10,36 @@ const ListProduct = () => {
                     {/* Breadcrumb  */}
                     <nav style={{}} aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><Link to="/"><a href="#">Trang chủ</a></Link></li>
                             <li class="breadcrumb-item active" aria-current="page">Thư viện sách</li>
                         </ol>
                     </nav>
                     {/*End of breadcrumb */}
                     <div class="row">
                         <div class="col-sm-4">
-
-                            <div class="card" style={{ width: "26rem" }} >
-                                <div class="card-header">
+                            <div>
+                                <div class="alert alert-primary" role="alert">
                                     Thống kê
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item fw-bold">Thư viện sách</li>
-                                    <li class="list-group-item">Số lượng sách: <span class="fw-bold">13.081</span></li>
-                                    <li class="list-group-item">Tổng số tệp điện tử: <span class="fw-bold">13.074</span></li>
-                                </ul>
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Thư viện sách</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="">Số lượng sách: <span class="fw-bold">13.081</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="">Tổng số tệp điện tử: <span class="fw-bold">13.074</span></div>
+                                        </div>
+                                    </li>
+                                </ol>
                             </div>
+
 
                             <div>
                                 <div class="alert alert-primary" role="alert">
@@ -80,6 +92,32 @@ const ListProduct = () => {
                                     </li>
                                 </ol>
                             </div>
+
+                            <div>
+                                <div class="alert alert-primary" role="alert">
+                                    Chi nhánh
+                                </div>
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Hà Nội</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">TP.Hồ Chí Minh</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Quảng Ninh</div>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+
+
+
                         </div>
 
                         <div class="container-fluid col-sm-8">
@@ -89,15 +127,14 @@ const ListProduct = () => {
                             <div class="card mb-3" style={{ maxWidth: "1000px" }} >
                                 <div class="row g-0">
                                     <div class="col-md-4">
-                                        <img src="https://thuvienso.hcmulaw.edu.vn/wpViewImage.ashx?Id=2251"
-                                            class="img-fluid rounded-start" alt="..." />
+                                        <Link to="/detail">
+                                            <img src="https://thuvienso.hcmulaw.edu.vn/wpViewImage.ashx?Id=2251"
+                                                class="img-fluid rounded-start" alt="..." />
+                                        </Link>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <Link to="/detail">
                                             <h5 class="card-title">Thi hành án chính ở Việt Nam - Lý luận và thực tiễn</h5>
-                                            </Link>
-                                        
                                             <ul class="address">
                                                 <li>
                                                     <label class="cola-md-12">Nhà xuất bản:</label>
