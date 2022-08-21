@@ -16,17 +16,29 @@ const ListProduct = () => {
                     {/*End of breadcrumb */}
                     <div class="row">
                         <div class="col-sm-4">
-
-                            <div class="card" style={{ width: "26rem" }} >
-                                <div class="card-header">
+                            <div>
+                                <div class="alert alert-primary" role="alert">
                                     Thống kê
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item fw-bold">Thư viện sách</li>
-                                    <li class="list-group-item">Số lượng sách: <span class="fw-bold">13.081</span></li>
-                                    <li class="list-group-item">Tổng số tệp điện tử: <span class="fw-bold">13.074</span></li>
-                                </ul>
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Thư viện sách</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="">Số lượng sách: <span class="fw-bold">13.081</span></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="">Tổng số tệp điện tử: <span class="fw-bold">13.074</span></div>
+                                        </div>
+                                    </li>
+                                </ol>
                             </div>
+
 
                             <div>
                                 <div class="alert alert-primary" role="alert">
@@ -79,6 +91,32 @@ const ListProduct = () => {
                                     </li>
                                 </ol>
                             </div>
+
+                            <div>
+                                <div class="alert alert-primary" role="alert">
+                                    Chi nhánh
+                                </div>
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Hà Nội</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">TP.Hồ Chí Minh</div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Quảng Ninh</div>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+
+
+
                         </div>
 
                         <div class="container-fluid col-sm-8">
