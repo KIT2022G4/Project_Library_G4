@@ -6,6 +6,10 @@
     padding: 250px 0 300px;
 }
 
+.navbar .container-fluid {
+    display: block;
+}
+
 .search-form .form-control {
     width: 63%;
 }
