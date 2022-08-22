@@ -1,141 +1,55 @@
 import './Profile.css';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
     return (
         <>
-            <div class="container emp-profile" style={{ background: "-webkit-linear-gradient(left, #3931af, #00c6ff)" }}>
-                {/* Breadcrumb  */}
-                <nav style={{}} aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><Link to="/"><a href="#">Trang chủ</a></Link></li>
-                        <li class="breadcrumb-item active" aria-current="page">Hồ sơ</li>
-                    </ol>
-                </nav>
-                {/*End of breadcrumb */}
-                <form method="post">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="profile-img">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
-                                    alt="" />
-                                <div class="file btn btn-lg btn-primary">
-                                    Thay đổi hình ảnh
-                                    <input type="file" name="file" />
-                                </div>
+            <div class="container bootstrap snippets bootdey">
+                <div class="row">
+                    <div class="profile-nav col-md-3">
+                        <div class="panel">
+                            <div class="user-heading round">
+                                <a href="#">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" />
+                                </a>
+                                <h1>Trần Thu Trà</h1>
+                                <p>Student</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="profile-head">
-                                <h5>
-                                    Trần Thu Trà
-                                </h5>
-                                <h6>
-                                    Học sinh
-                                </h6>
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                            aria-controls="home" aria-selected="true">Thông tin</a>
-                                    </li>
+                    </div>
+                    <div class="profile-info col-md-9">
 
-                                </ul>
+                        <div class="panel">
+                            <div class="bio-graph-heading">
+                                Open Library
                             </div>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="tab-content profile-tab" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>ID Độc giả</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>ThuTra123</p>
-                                        </div>
+                            <div class="panel-body bio-graph-info">
+                                <h1>Hồ sơ</h1>
+                                <div class="row">
+                                    <div class="bio-row">
+                                        <p><span>Họ và tên</span>: Trần Thu Trà</p>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Họ Và Tên</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Trần Thu Trà</p>
-                                        </div>
+                                    <div class="bio-row">
+                                        <p><span>Sách mượn</span>: 20</p>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Email</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>trathutran9@gmail.com</p>
-                                        </div>
+                                    <div class="bio-row">
+                                        <p><span>Email </span>: thutra@gmail.com</p>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Số điện thoại</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>123 456 7890</p>
-                                        </div>
+                                    <div class="bio-row">
+                                        <p><span>Sách chưa trả</span>: 5</p>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Nghề nghiệp</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Học sinh </p>
-                                        </div>
+                                    <div class="bio-row">
+                                        <p><span>Số điện thoại</span>:  (12) 03 4567890</p>
+                                    </div>
+                                    <div class="bio-row">
+                                        <p><span>Chi nhánh</span>: Hà Nội</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
 
-                <form method="post">
-                    <div class="row">
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="tab-content profile-tab" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Số sách đang mượn</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>20</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Số sách đã trả</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>5</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Tổng số sách đã mượn</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>25</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </>
     )
