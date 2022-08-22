@@ -1,8 +1,10 @@
 import './Home_guess.css';
 import React from 'react';
+import Header from '../../Components/Header/Header';
 const Home_guess = () => {
     return (
         <>
+        <Header />
             <section class="area overlay">
                 <div class="container">
                     <div class="row">
