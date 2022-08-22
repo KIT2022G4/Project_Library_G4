@@ -20,6 +20,8 @@
 
 .search-form button {
     width: 10%;
+    background-color: #fff;
+    color: #1b9d89;
 }
 
 .hero-text {
