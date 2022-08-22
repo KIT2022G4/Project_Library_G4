@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0"
   }

@@ -53,13 +53,13 @@ export default function data() {
       { Header: "Tên độc giả", accessor: "reader", width: "45%", align: "left" },
       { Header: "Nghề nghiệp", accessor: "function", align: "left" },
       { Header: "Trạng thái", accessor: "status", align: "center" },
-      { Header: "employed", accessor: "employed", align: "center" },
+      { Header: "Thời gian", accessor: "employed", align: "center" },
       { Header: "Hoạt động", accessor: "action", align: "center" },
     ],
 
     rows: [
       {
-        reader: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
+        reader: <Author image={team2} name="Nguyễn Tuấn Anh" email="tuananh@gmail.com" />,
         function: <Job title="Học sinh" description="Công nghệ thông tin" />,
         status: (
           <MDBox ml={-1}>
@@ -73,12 +73,12 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            Sửa
           </MDTypography>
         ),
       },
       {
-        reader: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
+        reader: <Author image={team3} name="Trần Khánh Vy" email="khanhvy@gmail.com" />,
         function: <Job title="Học sinh" description="Quản trị kinh doanh" />,
         status: (
           <MDBox ml={-1}>
@@ -92,12 +92,12 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            Sửa
           </MDTypography>
         ),
       },
       {
-        reader: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
+        reader: <Author image={team4} name="Nguyễn Gia Khiêm" email="giakhiem@gmail.com" />,
         function: <Job title="Giảng viên" description="Tâm lý học" />,
         status: (
           <MDBox ml={-1}>
@@ -111,12 +111,12 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            Sửa
           </MDTypography>
         ),
       },
       {
-        reader: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
+        reader: <Author image={team3} name="Nguyễn Lâm Thảo Tâm" email="thaotam@gmail.com" />,
         function: <Job title="Học sinh" description="Marketing" />,
         status: (
           <MDBox ml={-1}>
@@ -130,12 +130,12 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            Sửa
           </MDTypography>
         ),
       },
       {
-        reader: <Author image={team3} name="Richard Gran" email="richard@creative-tim.com" />,
+        reader: <Author image={team3} name="Nguyễn Thạch Trang" email="thachtrang@gmail.com" />,
         function: <Job title="Giảng viên" description="Ngôn ngữ Anh" />,
         status: (
           <MDBox ml={-1}>
@@ -149,12 +149,12 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            Sửa
           </MDTypography>
         ),
       },
       {
-        reader: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
+        reader: <Author image={team4} name="Nguyễn Việt Hoàng" email="viethoang@gmail.com" />,
         function: <Job title="Học sinh" description="Học sinh cấp 3" />,
         status: (
           <MDBox ml={-1}>
@@ -168,7 +168,64 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            Sửa
+          </MDTypography>
+        ),
+      },
+      {
+        reader: <Author image={team4} name="Bùi Anh Tuấn" email="viethoang@gmail.com" />,
+        function: <Job title="Học sinh" description="Học sinh cấp 3" />,
+        status: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+          </MDBox>
+        ),
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            14/09/20
+          </MDTypography>
+        ),
+        action: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            Sửa
+          </MDTypography>
+        ),
+      },
+      {
+        reader: <Author image={team4} name="Nguyễn Trần Trung Quân" email="viethoang@gmail.com" />,
+        function: <Job title="Học sinh" description="Học sinh cấp 3" />,
+        status: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+          </MDBox>
+        ),
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            14/09/20
+          </MDTypography>
+        ),
+        action: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            Sửa
+          </MDTypography>
+        ),
+      },
+      {
+        reader: <Author image={team4} name="Hà Anh Tuấn" email="viethoang@gmail.com" />,
+        function: <Job title="Học sinh" description="Học sinh cấp 3" />,
+        status: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+          </MDBox>
+        ),
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            14/09/20
+          </MDTypography>
+        ),
+        action: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            Sửa
           </MDTypography>
         ),
       },

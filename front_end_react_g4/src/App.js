@@ -10,8 +10,8 @@ import Profile from './Page/Profile/Profile';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home_guess from "./Page/Home/home_guess";
 import Userlayout from "./Page/UserLayout";
+import Admin from "./Page/Admin/Admin";
 import AdminLayout from "./Page/AdminLayout";
-import Admin from "./Page/Admin/routes";
 
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="profile" element={<Profile />} />
           <Route path="signup" element={<SignUp />} />
-          
         </Route>
 
         <Route path="/admin" element={<AdminLayout/>}>
