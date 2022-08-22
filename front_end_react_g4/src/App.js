@@ -21,6 +21,8 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="profile" element={<Profile />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="footer" element={<Footer />} />
+          
         </Route>
       </Routes>
     </BrowserRouter>
