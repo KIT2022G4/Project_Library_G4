@@ -6,6 +6,8 @@ import Login from './Page/Login/Login';
 import SignUp from './Page/SignUp/SignUp';
 import Profile from './Page/Profile/Profile';
 import Footer from './Page/Footer/Footer';
+import Header from './Page/Header/Header';
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home_guess from "./Page/Home/home_guess";
@@ -24,6 +26,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="footer" element={<Footer />} />
+          <Route path="header" element={<Header />} />
           
         </Route>
       </Routes>
