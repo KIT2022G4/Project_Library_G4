@@ -124,6 +124,10 @@ ul.social-network {
   float: right;
 }
 
+.nav-item .nav-link {
+  color: #000;
+}
+
 .waves-effect {
     position: relative;
     cursor: pointer;
@@ -161,8 +165,8 @@ li {
 }
 
 .mx-background-top-linear {
-    background: -webkit-linear-gradient(45deg, #54d400 48%, #1b1e21 48%);
-    background: -webkit-linear-gradient(left, #54d400 48%, #1b1e21 48%);
-    background: linear-gradient(45deg, #54d400 48%, #1b1e21 48%);
+    background: -webkit-linear-gradient(45deg, #87298a 48%, #1b9d89 48%);
+    background: -webkit-linear-gradient(left, #87298a 48%, #1b9d89 48%);
+    background: linear-gradient(45deg, #87298a 48%, #1b9d89 48%);
 }
 
