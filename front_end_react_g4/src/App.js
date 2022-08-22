@@ -5,6 +5,8 @@ import Detail from './Page/Detail/Detail'
 import Login from './Page/Login/Login';
 import SignUp from './Page/SignUp/SignUp';
 import Profile from './Page/Profile/Profile';
+import Footer from './Page/Footer/Footer';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home_guess from "./Page/Home/home_guess";
 import Userlayout from "./Page/UserLayout";
