@@ -19,109 +19,106 @@ export default function borrowBook() {
                     </div>
                     <div class="col py-3">
                         <h2>Quản lý độc giả</h2>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div className="input-group">
-                                </div>
-                                <p>
-                                </p>
-                            </div>
-                        </div>
-                        <table class="table">
-                            <tr >
-                                <th>STT</th>
-                                <th>Tên độc giả</th>
-                                <th>Số sách mượn</th>
-                                <th>
-                                    Thời gian<span> </span>
-                                </th>
-                                <th>Chi nhánh</th>
-                                <th>Hoạt động</th>
-                            </tr>
-                            <tr >
-                                <td>1</td>
-                                <td>Hoàng Anh</td>
-                                <td>5</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                                <Link to="/edit">
+
+                        <table class="table" style={{ border: "solid 2px" }}>
+                            <thead class="table-success">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên độc giả</th>
+                                    <th>Số sách mượn</th>
+                                    <th>
+                                        Thời gian
+                                    </th>
+                                    <th>Chi nhánh</th>
+                                    <th>Hoạt động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td>1</td>
+                                    <td>Hoàng Anh</td>
+                                    <td>5</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
                                     <td>
-                                        <button type="button" className="btn btn-primary">
-                                            Sửa
-                                        </button>
+                                        <Link to="/edit">
+                                            <button type="button" className="btn btn-primary">
+                                                Sửa
+                                            </button>
+                                        </Link>
                                     </td>
-                                </Link>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Hoàng Anh</td>
-                                <td>5</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                                <Link to="/edit">
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Hoàng Anh</td>
+                                    <td>5</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
                                     <td>
-                                        <button type="button" className="btn btn-primary">
-                                            Sửa
-                                        </button>
+                                        <Link to="/edit">
+                                            <button type="button" className="btn btn-primary">
+                                                Sửa
+                                            </button>
+                                        </Link>
                                     </td>
-                                </Link>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Hoàng Anh</td>
-                                <td>5</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                                <Link to="/edit">
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Hoàng Anh</td>
+                                    <td>5</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
                                     <td>
-                                        <button type="button" className="btn btn-primary">
-                                            Sửa
-                                        </button>
+                                        <Link to="/edit">
+                                            <button type="button" className="btn btn-primary">
+                                                Sửa
+                                            </button>
+                                        </Link>
                                     </td>
-                                </Link>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Hoàng Anh</td>
-                                <td>5</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                                <Link to="/edit">
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Hoàng Anh</td>
+                                    <td>5</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
                                     <td>
-                                        <button type="button" className="btn btn-primary">
-                                            Sửa
-                                        </button>
+                                        <Link to="/edit">
+                                            <button type="button" className="btn btn-primary">
+                                                Sửa
+                                            </button>
+                                        </Link>
                                     </td>
-                                </Link>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Hoàng Anh</td>
-                                <td>5</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                                <Link to="/edit">
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Hoàng Anh</td>
+                                    <td>5</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
                                     <td>
-                                        <button type="button" className="btn btn-primary">
-                                            Sửa
-                                        </button>
+                                        <Link to="/edit">
+                                            <button type="button" className="btn btn-primary">
+                                                Sửa
+                                            </button>
+                                        </Link>
                                     </td>
-                                </Link>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Hoàng Anh</td>
-                                <td>5</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                                <Link to="/edit">
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Hoàng Anh</td>
+                                    <td>5</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
                                     <td>
-                                        <button type="button" className="btn btn-primary">
-                                            Sửa
-                                        </button>
+                                        <Link to="/edit">
+                                            <button type="button" className="btn btn-primary">
+                                                Sửa
+                                            </button>
+                                        </Link>
                                     </td>
-                                </Link>
-                            </tr>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

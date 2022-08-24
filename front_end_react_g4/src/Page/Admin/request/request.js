@@ -19,59 +19,55 @@ export default function request() {
                     </div>
                     <div class="col py-3">
                         <h2>Danh mục yêu cầu sách</h2>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div className="input-group">
-                                </div>
-                                <p>
-                                </p>
-                            </div>
-                        </div>
-                        <table class="table">
-                            <tr >
-                                <th>STT</th>
-                                <th>Tên sách</th>
-                                <th>
-                                    Thời gian<span> </span>
-                                </th>
-                                <th>Chi nhánh</th>
-                            </tr>
-                            <tr >
-                                <td>1</td>
-                                <td>Vợ nhặt</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Vợ nhặt</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Vợ nhặt</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Vợ nhặt</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Vợ nhặt</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Vợ nhặt</td>
-                                <td>22/8/2022</td>
-                                <td>Hà Nội</td>
-                            </tr>
+                        <table class="table" style={{ border: "solid 2px" }}>
+                            <thead class="table-success" >
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên sách</th>
+                                    <th>
+                                        Thời gian
+                                    </th>
+                                    <th>Chi nhánh</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td>1</td>
+                                    <td>Vợ nhặt</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vợ nhặt</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vợ nhặt</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vợ nhặt</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vợ nhặt</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vợ nhặt</td>
+                                    <td>22/8/2022</td>
+                                    <td>Hà Nội</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

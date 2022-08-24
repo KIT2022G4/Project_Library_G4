@@ -4,17 +4,6 @@ import "./edit.css";
 // import { useState } from 'react';
 
 export default function edit() {
-  // const [books, setBooks] = useState(null);
-
-  // const saveUser = () => {
-  //     console.log('save data', books);
-
-  //     const requestOptions = {
-  //       method: method,
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify(products),
-  //     };
-  //   };
 
   return (
     <div class="container">
@@ -45,7 +34,6 @@ export default function edit() {
                         type="number"
                         className="form-control"
                         name="name"
-                      //   onChange={(e) => handleChange(e)}
                       ></input>
                     </td>
                   </tr>
@@ -58,7 +46,6 @@ export default function edit() {
                         type="text"
                         className="form-control"
                         name="name"
-                      //   onChange={(e) => handleChange(e)}
                       ></input>
                     </td>
                   </tr>
@@ -71,7 +58,6 @@ export default function edit() {
                         type="number"
                         className="form-control"
                         name="name"
-                      //   onChange={(e) => handleChange(e)}
                       ></input>
                     </td>
                   </tr>
@@ -85,7 +71,6 @@ export default function edit() {
                         type="date"
                         className="form-control"
                         name="name"
-                      //   onChange={(e) => handleChange(e)}
                       ></input>
                     </td>
                   </tr>
@@ -99,7 +84,6 @@ export default function edit() {
                         type="text"
                         className="form-control"
                         name="name"
-                      //   onChange={(e) => handleChange(e)}
                       ></input>
                     </td>
                   </tr>
@@ -109,7 +93,6 @@ export default function edit() {
                 <button
                   type="button"
                   class="btn btn-primary"
-                // onClick={() => saveUser()}
                 >
                   Save
                 </button>
