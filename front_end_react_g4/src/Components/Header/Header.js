@@ -1,6 +1,6 @@
 import './Header.css';
 import React from 'react';
-import { Link } from "react-router-dom";    
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -20,13 +20,18 @@ const Header = () => {
                                     <li class="nav-item active">
                                         <Link to="/login">
                                             <span class="nav-link " >Đăng nhập
-                                              
-                                        
                                             </span>
                                         </Link>
                                     </li>
                                     <li class="nav-item">
                                         <Link to="/signup"><span class="nav-link">Đăng ký tài khoản</span></Link>
+                                    </li>
+                                    <li class="nav-item">
+                                        <span>
+                                            <Link to="/profile">
+                                                <i class="fa-solid fa-user"></i>
+                                            </Link>
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
