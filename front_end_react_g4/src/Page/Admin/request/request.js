@@ -12,7 +12,7 @@ export default function request() {
                         <nav style={{}} aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><Link to="/admin"><a href="#">Admin</a></Link></li>
-                                <li class="breadcrumb-item active" aria-current="page">Quản lý độc giả</li>
+                                <li class="breadcrumb-item active" aria-current="page">Yêu cầu sách</li>
                             </ol>
                         </nav>
                         {/*End of breadcrumb */}
