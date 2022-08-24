@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.Date;
 import java.util.List;
 
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/api/v1")
 public class OrderBookController {
