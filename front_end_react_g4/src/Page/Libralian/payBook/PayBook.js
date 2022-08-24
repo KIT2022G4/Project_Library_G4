@@ -8,7 +8,7 @@ export default function PayBook() {
             {/* Breadcrumb  */}
             <nav style={{}} aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><Link to="/admin"><a href="#">Thủ thư</a></Link></li>
+                    <li class="breadcrumb-item"><Link to="/payBook"><a href="#">Thủ thư</a></Link></li>
                     <li class="breadcrumb-item active" aria-current="page">Quản lý sách trả</li>
                 </ol>
             </nav>
