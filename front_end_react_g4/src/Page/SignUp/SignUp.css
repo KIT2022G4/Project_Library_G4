@@ -95,3 +95,7 @@
       width: 200px;
 
     }
+    button.signup-button.btn.btn-primary {
+      width: 100px;
+      background-color: rgb(47, 128, 204);
+  }

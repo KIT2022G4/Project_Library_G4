@@ -32,7 +32,7 @@ const Login = () => {
                                     <input type="checkbox" checked="checked" name="remember" /> Remember me
                                 </label>
                                 <br></br>
-                                <button class="login-bt btn btn-primary" type="button">Đăng nhập</button>
+                                <button class="login-button btn btn-primary" type="button">Đăng nhập</button>
 
                                 <p>Not a member?
                                     <Link to="/signup"><a href="#!">Register</a></Link>

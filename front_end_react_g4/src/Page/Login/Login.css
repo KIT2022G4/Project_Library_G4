@@ -104,3 +104,7 @@ span.psw {
 .login-bt {
   width: 200px;
 }
+button.login-button.btn.btn-primary {
+  width: 120px;
+  background-color: rgb(47, 128, 204);
+}

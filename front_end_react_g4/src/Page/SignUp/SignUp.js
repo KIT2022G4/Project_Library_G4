@@ -35,7 +35,7 @@ const Login = () => {
                                     <input type="checkbox" checked="checked" name="remember" /> Remember me
                                 </label>
                                 <br></br>
-                                <button class="signup-bt btn btn-primary" type="button">Đăng ký</button>
+                                <button class="signup-button btn btn-primary " type="button">Đăng ký</button>
                         
                             </div>
                             <div class="container form1" style={{ backgroundColor: "f1f1f1" }}>
