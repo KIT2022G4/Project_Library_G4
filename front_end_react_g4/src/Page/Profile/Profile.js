@@ -5,6 +5,14 @@ const Profile = () => {
     return (
         <>
             <div class="container bootstrap snippets bootdey profile-edit">
+                 {/* Breadcrumb  */}
+                 <nav style={{}} aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><Link to="/"><a href="#">Trang chủ</a></Link></li>
+                        <li class="breadcrumb-item active" aria-current="page">Hồ sơ</li>
+                    </ol>
+                </nav>
+                {/*End of breadcrumb */}
                 <div class="row profile-fix">
                     <div class="profile-nav col-md-3">
                         <div class="panel">
