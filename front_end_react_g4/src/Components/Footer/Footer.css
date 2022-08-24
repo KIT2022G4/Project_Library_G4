@@ -133,16 +133,11 @@ input.submitbutton.ripplelink {
     margin-left: 5px;
     color: #000;
 }
-/* .footer {
-
-  height:24px; 
-  width: 100%; 
-  background-image: none;
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-position: 0% 0%;
+/* .footer{
   position: fixed;
-  bottom: 0pt;
-  left: 0pt;
-
-}   */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+} */

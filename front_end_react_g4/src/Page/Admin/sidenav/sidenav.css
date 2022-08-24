@@ -1,0 +1,10 @@
+.navbar_sidenav{
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    left: 0; /* Position the navbar at the top of the page */
+    width: 25%; /* Full width */
+    height: 30%;
+    padding-top: 60px;
+    padding-left: 300px;
+
+}

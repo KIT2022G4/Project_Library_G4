@@ -16,7 +16,6 @@ const Header = () => {
                             <div class="collapse navbar-collapse" id="navbarResponsive">
 
                                 <ul class="navbar-nav ms-auto">
-
                                     <li class="nav-item active">
                                         <Link to="/login">
                                             <a class="nav-link " href="#">Đăng nhập
@@ -24,11 +23,9 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     </li>
-
                                     <li class="nav-item">
                                         <Link to="/signup"><a class="nav-link" href="#">Đăng ký tài khoản</a></Link>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>

@@ -22,8 +22,6 @@ public class ScheduledTasks {
     @Autowired
     private OrderBookRepository orderBookRepository;
 
-
-
 //    @Scheduled(fixedDelay = 10000)
     @Scheduled(cron = "0 0 0 * * ?")
     public void updateUserStatus(){
