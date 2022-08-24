@@ -97,7 +97,7 @@ export default function edit() {
                   Save
                 </button>
                 <span> </span>
-                <Link to="/">
+                <Link to="/borrowBook">
                   <button type="button" class="btn btn-secondary">
                     Cancel
                   </button>
