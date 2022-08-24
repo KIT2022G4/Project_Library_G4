@@ -1,14 +1,13 @@
 package com.projectcapstone.library.controller;
 
 import com.projectcapstone.library.model.Branch;
-import com.projectcapstone.library.model.Rating;
 import com.projectcapstone.library.repository.BranchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/api/v1")
 public class BranchController {

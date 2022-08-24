@@ -169,8 +169,4 @@ li {
     background: -webkit-linear-gradient(left, #87298a 48%, #1b9d89 48%);
     background: linear-gradient(45deg, #87298a 48%, #1b9d89 48%);
 }
-.top-container {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-}
+
