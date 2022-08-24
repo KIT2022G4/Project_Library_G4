@@ -20,9 +20,6 @@ import Libralian from "./Page/Libralian/Libralian/Libralian";
 import registerBook from "./Page/Libralian/registerBook/registerBook";
 import PayBook from "./Page/Libralian/payBook/PayBook";
 
-
-
-
 function App() {
   return (
     <BrowserRouter>
