@@ -5,17 +5,17 @@ import "./request.css";
 export default function request() {
     return (
         <div className="container">
-            {/* Breadcrumb  */}
-            <nav style={{}} aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><Link to="/admin"><a href="#">Admin</a></Link></li>
-                    <li class="breadcrumb-item active" aria-current="page">Quản lý độc giả</li>
-                </ol>
-            </nav>
-            {/*End of breadcrumb */}
             <div class="container-fluid">
                 <div class="row flex-nowrap">
                     <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                        {/* Breadcrumb  */}
+                        <nav style={{}} aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><Link to="/admin"><a href="#">Admin</a></Link></li>
+                                <li class="breadcrumb-item active" aria-current="page">Quản lý độc giả</li>
+                            </ol>
+                        </nav>
+                        {/*End of breadcrumb */}
                     </div>
                     <div class="col py-3">
                         <h2>Danh mục yêu cầu sách</h2>

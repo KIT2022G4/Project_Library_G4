@@ -1,9 +1,7 @@
 import React, { useReducer } from 'react';
 import "./Admin.css";
-import sidenav from '../sidenav/sidenav';
 
 import { Link } from 'react-router-dom';
-import borrowBook from '../borrowBook/borrowBook';
 
 function Admin() {
 
@@ -12,7 +10,6 @@ function Admin() {
             <div class="container-fluid">
                 <div class="row flex-nowrap">
                     <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light fixed-left">
-                        {/* {sidenav()} */}
                         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 navbar">
                             <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
                                 <span class="fs-5 d-none d-sm-inline">Danh mục</span>
