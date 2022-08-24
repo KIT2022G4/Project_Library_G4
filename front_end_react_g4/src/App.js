@@ -16,7 +16,10 @@ import BorrowBook from './Page/Admin/borrowBook/borrowBook';
 import Request from "./Page/Admin/request/request";
 import Edit from "./Page/Admin/edit/edit";
 
-import Libralian from "./Page/Libralian/Libralian";
+import Libralian from "./Page/Libralian/Libralian/Libralian";
+import registerBook from "./Page/Libralian/registerBook/registerBook";
+import PayBook from "./Page/Libralian/payBook/PayBook";
+
 
 
 
@@ -37,7 +40,13 @@ function App() {
           <Route path="request" element={<Request />} />
           <Route path="edit" element={<Edit />} />
         </Route>
+
           <Route path="Libralian" element={<Libralian />} />
+
+
+
+          <Route path="paybook" element={<PayBook/>} />
+
       </Routes>
     </BrowserRouter>
   );
