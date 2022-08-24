@@ -40,13 +40,13 @@ function App() {
           <Route path="request" element={<Request />} />
           <Route path="edit" element={<Edit />} />
         </Route>
-<<<<<<< Updated upstream
+
           <Route path="Libralian" element={<Libralian />} />
-=======
+
 
 
           <Route path="paybook" element={<PayBook/>} />
->>>>>>> Stashed changes
+
       </Routes>
     </BrowserRouter>
   );
