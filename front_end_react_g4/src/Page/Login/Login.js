@@ -40,7 +40,9 @@ const Login = () => {
 
                             </div>
                             <div class="container form1" style={{ backgroundColor: "f1f1f1" }}>
-                                <button type="button" class="cancelbtn">Thoát</button>
+                               <Link to="/">
+                               <button type="button" class="cancelbtn">Thoát</button>
+                               </Link>
                                 <span class="psw">Quên <a href="#">mật khẩu?</a></span>
                             </div>
                         </form>

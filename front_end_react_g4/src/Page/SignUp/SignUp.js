@@ -39,7 +39,9 @@ const Login = () => {
                         
                             </div>
                             <div class="container form1" style={{ backgroundColor: "f1f1f1" }}>
+                                <Link to="/">
                                 <button type="button" class="cancelbtn">Thoát</button>
+                                </Link>
                             </div>
                         </form>
                     </div>
