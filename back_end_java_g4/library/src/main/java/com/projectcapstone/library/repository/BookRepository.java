@@ -13,6 +13,12 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Query("select b from Book b where b.category.idcategory = ?1 ")
     List<Book> bookByCategory(Long idCategory);
 
-    @Query("select count(b) from Book b where b.category.idcategory = ?1 ")
-    Integer numberBookByCategory(Long idCategory);
+    @Query("select count(b) from Book b")
+    Integer numberBook();
+    @Query("select b from Book b where b.codebook = ?1 ")
+    Book bookByCodeBook(String codeBook);
+
+    @Query("SELECT b FROM Book b WHERE lower(b.bookname) LIKE %?1% or lower(b.author) LIKE %?1% " )
+    List<Book> bookSearch(String name);
+
 }

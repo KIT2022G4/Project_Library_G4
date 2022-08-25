@@ -1,285 +1,153 @@
-import './ListProduct.css';
-import React from "react";
+import "./ListProduct.css";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const ListProduct = () => {
-    return (
-        <>
-            <div class="container-fluid">
-                <div class="container">
-                    {/* Breadcrumb  */}
-                    <nav style={{}} aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><Link to="/"><a href="#">Trang chủ</a></Link></li>
-                            <li class="breadcrumb-item active" aria-current="page">Thư viện sách</li>
-                        </ol>
-                    </nav>
-                    {/*End of breadcrumb */}
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div>
-                                <div class="alert alert-primary" role="alert">
-                                    Thống kê
-                                </div>
-                                <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Thư viện sách</div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="">Số lượng sách: <span class="fw-bold">13.081</span></div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="">Tổng số tệp điện tử: <span class="fw-bold">13.074</span></div>
-                                        </div>
-                                    </li>
-                                </ol>
-                            </div>
+  let url = "http://localhost:8080/api/v1/book";
+  const location = useLocation();
+  if (location.state != null) {
+    const { idcategory } = location.state;
+    const { codebranch } = location.state;
+    const { searchTerm } = location.state;
+    if (idcategory != null) {
+      url = "http://localhost:8080/api/v1/bookByCategory/" + idcategory;
+    }
+    if (codebranch != null) {
+      url = "http://localhost:8080/api/v1/bookByBranch/" + codebranch;
+    }
+    if (searchTerm != null) {
+      url = "http://localhost:8080/api/v1/bookSearch/" + searchTerm;
+    }
+  }
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      setBook(response.data);
+    });
+  }, [url]);
 
-
-                            <div>
-                                <div class="alert alert-primary" role="alert">
-                                    Thư viện sách
-                                </div>
-                                <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Chính trị - Pháp luật</div>
-
-                                        </div>
-                                        <span class="badge bg-primary rounded-pill">150</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Khoa học công nghệ - Kinh tế</div>
-
-                                        </div>
-                                        <span class="badge bg-primary rounded-pill">90</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Văn học nghệ thuật</div>
-                                        </div>
-                                        <span class="badge bg-primary rounded-pill">50</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Văn hóa xã hội - Lịch sử</div>
-                                        </div>
-                                        <span class="badge bg-primary rounded-pill">50</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Truyện - Tiểu Thuyết</div>
-                                        </div>
-                                        <span class="badge bg-primary rounded-pill">50</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Tâm lý - Tâm linh - Tôn giáo</div>
-                                        </div>
-                                        <span class="badge bg-primary rounded-pill">50</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Sách thiếu nhi</div>
-                                        </div>
-                                        <span class="badge bg-primary rounded-pill">50</span>
-                                    </li>
-                                </ol>
-                            </div>
-
-                            <div>
-                                <div class="alert alert-primary" role="alert">
-                                    Chi nhánh
-                                </div>
-                                <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Hà Nội</div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">TP.Hồ Chí Minh</div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Quảng Ninh</div>
-                                        </div>
-                                    </li>
-                                </ol>
-                            </div>
-
-
-
-                        </div>
-
-                        <div class="container-fluid col-sm-8">
-                            <div class="alert alert-primary" role="alert">
-                                Danh mục sách
-                            </div>
-                            <div class="card mb-3" style={{ maxWidth: "1000px" }} >
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <Link to="/detail">
-                                            <img src="https://thuvienso.hcmulaw.edu.vn/wpViewImage.ashx?Id=2251"
-                                                class="img-fluid rounded-start" alt="..." />
-                                        </Link>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Thi hành án chính ở Việt Nam - Lý luận và thực tiễn</h5>
-                                            <ul class="address">
-                                                <li>
-                                                    <label class="cola-md-12">Nhà xuất bản:</label>
-                                                    <div class="col-md-12">
-                                                        <span
-                                                            id="ctl00_phContent_grvPage_ctl03_rptListEdataFile_ctl01_lblPublisher"><a
-                                                                href="TraCuuTaiLieuSo2KetQuaTimKiem.aspx?Id=2251&amp;Type=Publisher&amp;MetaData="></a><br></br></span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <label class="col-md-12">Chủ đề:</label>
-                                                    <div class="col-md-12">
-                                                        <span>
-                                                            <p>Thi hành án <br></br>
-                                                                Hành chính</p>
-                                                        </span>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="card mb-3" style={{ maxWidth: "1000px" }}>
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="https://thuvienso.hcmulaw.edu.vn/wpViewImage.ashx?Id=2251"
-                                                class="img-fluid rounded-start" alt="..." />
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Thi hành án chính ở Việt Nam - Lý luận và thực tiễn</h5>
-                                                <ul class="address">
-                                                    <li>
-                                                        <label class="col-md-12">Nhà xuất bản:</label>
-                                                        <div class="col-md-12">
-                                                            <span
-                                                                id="ctl00_phContent_grvPage_ctl03_rptListEdataFile_ctl01_lblPublisher"><a
-                                                                    href="TraCuuTaiLieuSo2KetQuaTimKiem.aspx?Id=2251&amp;Type=Publisher&amp;MetaData="></a><br></br></span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <label class="col-md-12">Chủ đề:</label>
-                                                        <div class="col-md-12">
-                                                            <span>
-                                                                <p>Thi hành án <br></br>
-                                                                    Hành chính</p>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-
-                                                </ul>
-                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="card mb-3" style={{ maxWidth: "1000px" }}>
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="https://thuvienso.hcmulaw.edu.vn/wpViewImage.ashx?Id=2251"
-                                                class="img-fluid rounded-start" alt="..." />
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Thi hành án chính ở Việt Nam - Lý luận và thực tiễn</h5>
-                                                <ul class="address">
-                                                    <li>
-                                                        <label class="col-md-12">Nhà xuất bản:</label>
-                                                        <div class="col-md-12">
-                                                            <span
-                                                                id="ctl00_phContent_grvPage_ctl03_rptListEdataFile_ctl01_lblPublisher"><a
-                                                                    href="TraCuuTaiLieuSo2KetQuaTimKiem.aspx?Id=2251&amp;Type=Publisher&amp;MetaData="></a><br></br></span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <label class="col-md-12">Chủ đề:</label>
-                                                        <div class="col-md-12">
-                                                            <span>
-                                                                <p>Thi hành án <br></br>
-                                                                    Hành chính</p>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-
-                                                </ul>
-                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="card mb-3" style={{ maxWidth: "1000px" }}>
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="https://thuvienso.hcmulaw.edu.vn/wpViewImage.ashx?Id=2251"
-                                                class="img-fluid rounded-start" alt="..." />
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Thi hành án chính ở Việt Nam - Lý luận và thực tiễn</h5>
-                                                <ul class="address">
-                                                    <li>
-                                                        <label class="col-md-12">Nhà xuất bản:</label>
-                                                        <div class="col-md-12">
-                                                            <span
-                                                                id="ctl00_phContent_grvPage_ctl03_rptListEdataFile_ctl01_lblPublisher"><a
-                                                                    href="TraCuuTaiLieuSo2KetQuaTimKiem.aspx?Id=2251&amp;Type=Publisher&amp;MetaData="></a><br></br></span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <label class="col-md-12">Chủ đề:</label>
-                                                        <div class="col-md-12">
-                                                            <span>
-                                                                <p>Thi hành án <br></br>
-                                                                    Hành chính</p>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-
-                                                </ul>
-                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  var bookList = [];
+  if (book != null) {
+    bookList = book.map((item) => (
+      <div class="card mb-3" style={{ maxWidth: "1000px" }}>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <Link to={"/detail/" + item.idbook}>
+              <img
+                src={item.bookimage}
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </Link>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <Link to={"/detail/" + item.idbook}>
+                <h5 class="card-title">{item.bookname}</h5>
+              </Link>
+              <ul class="address">
+                <li>
+                  <span class="col-md-12">Tác giả: {item.author}</span>
+                </li>
+                <li>
+                  <span class="col-md-12">Nhà xuất bản: {item.publisher}</span>
+                </li>
+                <li>
+                  <span class="col-md-12">Năm xuất bản: {item.dor}</span>
+                </li>
+              </ul>
             </div>
-        </>
-    )
-}
-export default ListProduct
+          </div>
+        </div>
+      </div>
+    ));
+  }
+  const [branch, setBranch] = useState([]);
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/v1/branch").then((response) => {
+      setBranch(response.data);
+    });
+    axios.get("http://localhost:8080/api/v1/category").then((response) => {
+      setCategory(response.data);
+    });
+  }, []);
+
+  var branchList = [];
+  if (branch != null) {
+    branchList = branch.map((item) => (
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+        key={item.codebranch}
+      >
+        <div class="ms-2 me-auto">
+          <Link to={"/listproduct"} state={{ codebranch: item.codebranch }}>
+            <span class="fw-bold">{item.branchname}</span>
+          </Link>
+        </div>
+      </li>
+    ));
+  }
+
+  var categoryList = [];
+  if (category != null) {
+    categoryList = category.map((item) => (
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+        key={item.idcategory}
+      >
+        <div class="ms-2 me-auto">
+          <Link to={"/listproduct"} state={{ idcategory: item.idcategory }}>
+            <span class="fw-bold">{item.categoryname}</span>
+          </Link>
+        </div>
+      </li>
+    ));
+  }
+
+  return (
+    <>
+      <div class="container-fluid">
+        <div class="container">
+          <nav style={{}} aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <Link to="/">Trang chủ</Link>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Thư viện sách
+              </li>
+            </ol>
+          </nav>
+          <div class="row">
+            <div class="col-sm-4">
+              <div>
+                <div class="alert alert-primary" role="alert">
+                  Thể loại
+                </div>
+                <ol class="list-group list-group-numbered">{categoryList}</ol>
+              </div>
+
+              <div>
+                <div class="alert alert-primary" role="alert">
+                  Chi nhánh
+                </div>
+                <ol class="list-group list-group-numbered">{branchList}</ol>
+              </div>
+            </div>
+
+            <div class="container-fluid col-sm-8">
+              <div class="alert alert-primary" role="alert">
+                Danh mục sách
+              </div>
+              {bookList}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+export default ListProduct;

@@ -2,10 +2,13 @@ package com.projectcapstone.library.controller;
 
 import com.projectcapstone.library.model.Book;
 import com.projectcapstone.library.repository.BookRepository;
+import com.projectcapstone.library.repository.DetailBookRepository;
 import com.projectcapstone.library.repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,10 +21,13 @@ public class BookController {
     @Autowired
     private BookRepository bookRepository;
 
+    @Autowired
+    private DetailBookRepository detailBookRepository;
     @GetMapping("/book")
     public List <Book> getAllBooks() {
         return bookRepository.findAll();
     }
+
     @GetMapping("/book/{id}")
     public ResponseEntity< Book > getBookById(@PathVariable Long id) {
         Book book = bookRepository.findById(id).orElseThrow();
@@ -63,8 +69,25 @@ public class BookController {
         return bookRepository.bookByCategory(id);
     }
 
-    @GetMapping("/numberBookByCategory/{id}")
-    public Integer getNumberBookByCategory(@PathVariable Long id) {
-        return bookRepository.numberBookByCategory(id);
+    @GetMapping("/bookByBranch/{codeBranch}")
+    public List <Book> getBookByBranch(@PathVariable String codeBranch) {
+        List<String> codeBook = detailBookRepository.listCodeBookOnBranch(codeBranch);
+        List<Book> bookList = new ArrayList<>();
+        for(String i:codeBook){
+            Book book = bookRepository.bookByCodeBook(i);
+            bookList.add(book);
+        }
+        return bookList;
+    }
+
+    @GetMapping("/bookSearch/{name}")
+    public List <Book> getBookSearch(@PathVariable String name) {
+        return bookRepository.bookSearch(name);
+    }
+
+
+    @GetMapping("/numberBook")
+    public Integer getNumberBook() {
+        return bookRepository.numberBook();
     }
 }
