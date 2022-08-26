@@ -12,11 +12,12 @@ import java.sql.Date;
 @Table(name = "userstatus")
 public class UserStatus implements Serializable {
     @Id
-    @Column(name = "iduser")
-    private long iduser;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private long id;
 
     @OneToOne
-    @PrimaryKeyJoinColumn(name = "iduser", referencedColumnName = "iduser")
+    @JoinColumn(name = "iduser")
     private User user;
 
     private Integer remainingbook;

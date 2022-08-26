@@ -63,7 +63,7 @@ public class UserController {
         User u = userRepository.save(user);
         if(user.getRole().getIdrole() < 4){
             UserStatus us = new UserStatus();
-            us.setIduser(u.getIduser());
+            us.setUser(u);
             us.setStatus(true);
             us.setTimeupdate(new java.sql.Date(new java.util.Date().getTime()));
             us.setCrime(0);
